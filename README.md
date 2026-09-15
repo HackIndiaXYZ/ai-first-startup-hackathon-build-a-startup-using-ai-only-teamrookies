@@ -3,6 +3,9 @@
 > **"Your AI co-founder for discovering, validating, and launching the right startup."**  
 > *"Your next startup could be hiding in your skills — or on your street."*
 
+![Figure 1: AI COMPANY Landing Interface & Platform Core](screenshots/1_index.jpg)
+
+
 ---
 
 ## 1. Executive Summary & Core Philosophy
@@ -35,6 +38,8 @@ to definitively answer the three essential startup questions:
 - Interactive operational sliders: AI Intensity, Technical Complexity, Risk Appetite, Investment, Scalability, MVP Speed, B2C vs B2B.
 - Real-time 9-dimension capability radar chart (Recharts) and AI executive summary.
 
+![Figure 5: Founder DNA Profile & Command Dashboard](screenshots/5_dashboard.jpg)
+
 ### 📍 Moment 2: 5KM Market Intelligence & Interactive Competitor Radar
 - Grounded location scanner with 1KM, 5KM, 15KM, 50KM radius selector.
 - Animated multi-step radar sweep (geolocation, density clustering, review signal extraction, gap detection).
@@ -49,6 +54,8 @@ Categorized across 4 distinct discovery paradigms:
 - **Best For You** (Founder-First): Ranked purely on technical depth, risk tolerance, and operational preferences.
 - **Best For This Area** (Market-First): Uncovers urgent local voids regardless of existing comfort zones.
 - **✨ Surprise Me** (Unconventional): Deliberately recommends high-signal opportunities outside usual interests where unfair technical leverage exists.
+
+![Figure 11: The Opportunity Radar (12 Discovered Ventures)](screenshots/11_opportunities.jpg)
 
 ### 💀 Moment 4: Signature "Kill My Startup" (Adversarial Devil's Advocate)
 - The AI acts as a hardened seed investor and devil's advocate.
@@ -76,6 +83,8 @@ Categorized across 4 distinct discovery paradigms:
   - **PRODUCT (Liam O'Connor)**: Anti-scope creep, MVP simplicity, 2-step user journey.
 - Live animated debate timeline, explicit clashes (e.g. CEO vs CFO on pricing, CTO vs Risk on privacy), and synthesized **Board Decision** (`BUILD`, `MODIFY`, `VALIDATE`, `DONT_BUILD`).
 
+![Figure 16: The AI Boardroom (8 Autonomous C-Suite Debate)](screenshots/16_boardroom.jpg)
+
 ### 📊 Moment 8: Heuristic Startup Score & 12-Month Simulator
 - 10-dimension heuristic scoring index with strongest/weakest factor analysis and biggest uncertainty.
 - Interactive financial simulator: Modulate price, CAC, churn rate, and marketing budget to inspect 12-month projections across Conservative, Base, and Aggressive scenarios.
@@ -90,6 +99,8 @@ Categorized across 4 distinct discovery paradigms:
 - **"🚫 WHAT NOT TO BUILD YET" Manifesto**: Explicitly guards against overbuilding hospital enterprise billing suites or mobile apps before securing pilot clinics.
 - AI Build Agent execution trace (Architecture, Database, Auth, APIs, UI, Testing, Deployment).
 - "Break My App" QA stress-test report & Automated Security Readiness Auditor.
+
+![Figure 21: Scope-Guarded MVP Builder & Architecture Trace](screenshots/21_mvp.jpg)
 
 ### 🚀 Moment 11: Launch Center & Persistent AI Co-Founder
 - Complete go-to-market kit: Landing page copy, pricing tiers, social announcement threads (LinkedIn, X/Twitter), cold email campaign, 2-minute demo pitch script, and first 100 customer playbook.
@@ -216,5 +227,5 @@ DEMO_MODE=true
 
 ## 8. License & Team Credits
 
-Built for the **AI-First Startup Hackathon** by **TEAM ROOKIES**.  
+Built for the **AI-First Startup Hackathon** by **TEAM ROOKIES** (**Saurav B**).  
 Licensed under the [MIT License](LICENSE).
