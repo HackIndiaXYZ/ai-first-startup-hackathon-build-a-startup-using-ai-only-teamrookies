@@ -1,0 +1,159 @@
+1
+00:00:00,500 --> 00:00:04,300
+Hello everyone, I'm Saurav B from Team Rookies...
+
+2
+00:00:04,600 --> 00:00:08,700
+...and today we are presenting AI COMPANY: The AI-First Startup Decision Intelligence Platform.
+
+3
+00:00:09,100 --> 00:00:13,200
+Ninety percent of startups fail not because founders couldn't build the product...
+
+4
+00:00:13,500 --> 00:00:16,800
+...but because they spent months building something nobody actually wanted.
+
+5
+00:00:17,200 --> 00:00:21,100
+Most AI tools today act as 'yes-men'—generating generic pitch decks and flattering weak ideas.
+
+6
+00:00:21,500 --> 00:00:24,300
+They encourage you to build first before validating the market.
+
+7
+00:00:24,800 --> 00:00:28,900
+At Team Rookies, we built AI COMPANY on a completely opposite philosophy:
+
+8
+00:00:29,200 --> 00:00:33,700
+Don't build first. Discover, validate, differentiate, decide, build, and launch.
+
+9
+00:00:34,200 --> 00:00:38,400
+It starts with Moment One: The Founder DNA Profiler.
+
+10
+00:00:38,800 --> 00:00:43,200
+We map your technical depth, risk appetite, and speed across 26 distinct domains...
+
+11
+00:00:43,600 --> 00:00:46,900
+...synthesizing an interactive nine-dimension capability radar.
+
+12
+00:00:47,400 --> 00:00:51,500
+Next is Moment Two: Our Grounded 5-Kilometer Market Intelligence.
+
+13
+00:00:51,900 --> 00:00:55,800
+Using Leaflet dark-matter cartography, we scan real local business density...
+
+14
+00:00:56,200 --> 00:01:00,300
+...mining customer review pain signals to detect urgent structural voids and referral partners.
+
+15
+00:01:00,800 --> 00:01:04,600
+In Moment Three, the Opportunity Radar synthesizes 12 high-conviction ventures...
+
+16
+00:01:05,000 --> 00:01:09,300
+...ranked across Founder-First, Market-First, Surprise Me, and the Golden Intersection.
+
+17
+00:01:09,800 --> 00:01:13,900
+Here, our engine surfaces ClinicFlow AI—an ambient copilot for local outpatient clinics.
+
+18
+00:01:14,400 --> 00:01:18,500
+Instead of false optimism, Moment Four hits you with 'Kill My Startup'.
+
+19
+00:01:19,000 --> 00:01:23,200
+Our adversarial AI acts as a hardened seed investor, attacking defensibility and switching friction.
+
+20
+00:01:23,700 --> 00:01:27,900
+It delivers a heuristic survival score and is strictly empowered to say: DON'T BUILD.
+
+21
+00:01:28,400 --> 00:01:32,600
+To survive, Moment Five activates: Make It Unique.
+
+22
+00:01:33,000 --> 00:01:37,300
+We engineer unfair moats across 10 vectors—including workflow zero-click integration.
+
+23
+00:01:37,800 --> 00:01:41,900
+Now, watch Moment Seven: The Autonomous AI Boardroom.
+
+24
+00:01:42,400 --> 00:01:46,600
+Eight autonomous C-Suite agents engage in a live, unscripted strategic debate.
+
+25
+00:01:47,100 --> 00:01:51,200
+Our CFO challenges burn rate, our CTO demands sub-second voice transcription...
+
+26
+00:01:51,600 --> 00:01:55,700
+...and our Risk Agent mandates zero raw audio storage for patient compliance.
+
+27
+00:01:56,200 --> 00:02:00,300
+The board clashes directly and synthesizes a binding decision: MODIFY.
+
+28
+00:02:00,800 --> 00:02:04,900
+In Moment Eight, we test the unit economics in the 12-Month Financial Simulator...
+
+29
+00:02:05,300 --> 00:02:09,500
+...modulating CAC, churn, and price across Conservative, Base, and Aggressive projections.
+
+30
+00:02:10,000 --> 00:02:14,200
+Moment Nine launches the Validation Lab with shareable, live public surveys.
+
+31
+00:02:14,600 --> 00:02:18,800
+We collect real willingness-to-pay signals from potential customers in real time.
+
+32
+00:02:19,300 --> 00:02:23,400
+Notice our five-tier evidence badges: every single insight is tagged...
+
+33
+00:02:23,800 --> 00:02:28,100
+...separating verified data and observations from AI inferences and unproven assumptions.
+
+34
+00:02:28,600 --> 00:02:32,800
+Moment 10 introduces our Scope-Guarded MVP Builder.
+
+35
+00:02:33,200 --> 00:02:37,400
+Our 'What NOT To Build Yet' manifesto protects founders from deadly feature bloat.
+
+36
+00:02:37,900 --> 00:02:42,100
+And Moment 11 delivers a complete Launch Kit with pricing, copy, and cold outreach...
+
+37
+00:02:42,500 --> 00:02:46,300
+...backed by a persistent AI Co-Founder guiding your daily tactical execution.
+
+38
+00:02:46,800 --> 00:02:50,900
+Built with React 18, TypeScript, Tailwind, Node.js, and 18 autonomous multi-agent engines.
+
+39
+00:02:51,400 --> 00:02:55,200
+I am Saurav B from Team Rookies. Stop building blind.
+
+40
+00:02:55,500 --> 00:02:59,500
+With AI COMPANY, build what actually deserves to exist. Thank you!
