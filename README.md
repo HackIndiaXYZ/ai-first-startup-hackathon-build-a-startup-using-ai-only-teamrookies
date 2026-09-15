@@ -206,27 +206,6 @@ DEMO_MODE=true
 
 ---
 
-## 7. 3-Minute Hackathon Demo Script
-
-1. **The Problem (0:00 - 0:30)**:
-   - Open Landing Page: "Most tools ask 'What can AI build?'. AI COMPANY asks 'Should you build this at all?'"
-   - Click `[ DISCOVER MY STARTUP ]`.
-2. **Founder DNA & 5KM Ground (0:30 - 1:00)**:
-   - Select skills (AI, Cybersecurity, Healthcare) & preference sliders.
-   - Click `[ SCAN MARKET & GENERATE DNA ]`. Show the 9-dimension radar chart and 5KM ground mapping.
-3. **The Opportunity Radar (1:00 - 1:30)**:
-   - Explore the 12 opportunities: "Best Intersection", "Best For Area", and "✨ Surprise Me".
-   - Select **ClinicFlow AI** (Ambient Outpatient Clinical Copilot).
-4. **💀 Kill My Startup & Differentiation (1:30 - 2:00)**:
-   - Run the Kill Test: Survival Score (68/100), fatal questions, and "Why It May Fail".
-   - Switch to **✨ Make It Unique**: 10-vector defensibility transformation.
-5. **The AI Boardroom Debate & MVP (2:00 - 3:00)**:
-   - Open the AI Boardroom: Watch the 8 C-Suite agents clash and synthesize the `MODIFY` decision.
-   - Show the MVP Builder and the critical **"What NOT To Build Yet"** scope guard.
-   - Show the Live Public Survey link and instant respondent analytics.
-
----
-
 ## 8. License & Team Credits
 
 Built for the **AI-First Startup Hackathon** by **TEAM ROOKIES** (**Saurav B**).  
