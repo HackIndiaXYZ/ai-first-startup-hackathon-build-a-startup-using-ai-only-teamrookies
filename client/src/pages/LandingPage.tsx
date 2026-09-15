@@ -15,7 +15,8 @@ import {
   TrendingUp,
   Layers
 } from 'lucide-react';
-import { EvidenceBadge } from '../components/common/EvidenceBadge.js';
+import { EvidenceBadge } from '../components/common/EvidenceBadge';
+import { Logo } from '../components/common/Logo';
 
 export const LandingPage: React.FC = () => {
   return (
@@ -23,15 +24,9 @@ export const LandingPage: React.FC = () => {
       {/* Top Header */}
       <header className="border-b border-slate-800/80 bg-dark-950/70 backdrop-blur-md sticky top-0 z-30 px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
-              <Sparkles className="w-4 h-4 text-dark-950 font-bold" />
-            </div>
-            <span className="font-extrabold text-lg tracking-tight text-white">AI COMPANY</span>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 font-semibold hidden sm:inline">
-              DECISION INTELLIGENCE
-            </span>
-          </div>
+          <Link to="/" className="flex items-center">
+            <Logo size="md" />
+          </Link>
 
           <div className="flex items-center gap-3">
             <Link

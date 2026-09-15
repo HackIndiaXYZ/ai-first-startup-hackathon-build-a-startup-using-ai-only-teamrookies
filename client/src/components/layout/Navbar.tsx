@@ -10,6 +10,7 @@ import {
   Menu,
   X
 } from 'lucide-react';
+import { Logo } from '../common/Logo';
 
 interface NavbarProps {
   currentStartupName?: string;
@@ -33,25 +34,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         {/* Logo & Platform Name */}
         <div className="flex items-center gap-3">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-dark-950 rounded-[7px] flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-emerald-400 group-hover:text-cyan-400 transition-colors" />
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-extrabold text-lg tracking-tight text-white group-hover:text-emerald-400 transition-colors">
-                  AI COMPANY
-                </span>
-                <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 font-semibold">
-                  v1.0
-                </span>
-              </div>
-              <span className="text-[11px] text-slate-400 font-mono tracking-tight hidden sm:block">
-                Decision Intelligence Platform
-              </span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <Logo size="md" />
           </Link>
         </div>
 
