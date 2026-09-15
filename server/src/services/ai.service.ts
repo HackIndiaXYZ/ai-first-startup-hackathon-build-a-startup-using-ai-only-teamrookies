@@ -6,51 +6,82 @@ export interface LLMRequest {
 }
 
 export class AIService {
-  private groqKey = process.env.GROQ_API_KEY;
-  private geminiKey = process.env.GEMINI_API_KEY;
-  private openaiKey = process.env.OPENAI_API_KEY;
-  private isDemoMode = process.env.DEMO_MODE !== 'false';
+  private get groqKey(): string | undefined {
+    return process.env.GROQ_API_KEY?.trim();
+  }
+
+  private get geminiKey(): string | undefined {
+    return process.env.GEMINI_API_KEY?.trim();
+  }
+
+  private get openaiKey(): string | undefined {
+    return process.env.OPENAI_API_KEY?.trim();
+  }
+
+  public get isLiveApiConfigured(): boolean {
+    return Boolean(this.groqKey || this.geminiKey || this.openaiKey);
+  }
 
   public async generateStructuredJSON<T>(request: LLMRequest, fallbackGenerator: () => T): Promise<T> {
-    // If external keys are provided and demo mode is not forced, attempt live call
+    // 1. Try Groq (Fastest, low latency Llama-3.3-70B)
     if (this.groqKey) {
       try {
+        console.log('⚡ Calling Groq API with Llama-3.3-70B...');
         const result = await this.callGroq(request);
         const parsed = this.safeParseJSON<T>(result);
-        if (parsed) return parsed;
+        if (parsed) {
+          console.log('✅ Groq response successfully parsed as structured JSON.');
+          return parsed;
+        }
       } catch (err) {
-        console.warn('Groq generation fallback triggered:', (err as Error).message);
+        console.warn('⚠️ Groq generation failed, attempting next provider:', (err as Error).message);
       }
     }
 
+    // 2. Try Google Gemini
     if (this.geminiKey) {
       try {
+        console.log('⚡ Calling Google Gemini API (gemini-1.5-flash)...');
         const result = await this.callGemini(request);
         const parsed = this.safeParseJSON<T>(result);
-        if (parsed) return parsed;
+        if (parsed) {
+          console.log('✅ Gemini response successfully parsed as structured JSON.');
+          return parsed;
+        }
       } catch (err) {
-        console.warn('Gemini generation fallback triggered:', (err as Error).message);
+        console.warn('⚠️ Gemini generation failed, attempting next provider:', (err as Error).message);
       }
     }
 
+    // 3. Try OpenAI
     if (this.openaiKey) {
       try {
+        console.log('⚡ Calling OpenAI API (gpt-4o-mini)...');
         const result = await this.callOpenAI(request);
         const parsed = this.safeParseJSON<T>(result);
-        if (parsed) return parsed;
+        if (parsed) {
+          console.log('✅ OpenAI response successfully parsed as structured JSON.');
+          return parsed;
+        }
       } catch (err) {
-        console.warn('OpenAI generation fallback triggered:', (err as Error).message);
+        console.warn('⚠️ OpenAI generation failed:', (err as Error).message);
       }
     }
 
-    // High quality deterministic domain agent fallback
+    // 4. Built-in Deterministic Domain Agent Fallback (zero-crash guarantee)
+    console.log('ℹ️ Running in resilient Decision Engine mode (fallback or zero-key mode).');
     return fallbackGenerator();
   }
 
   private safeParseJSON<T>(text: string): T | null {
     try {
       // Remove any markdown code blocks ```json ... ```
-      const cleaned = text.replace(/```json/gi, '').replace(/```/g, '').trim();
+      let cleaned = text.replace(/```json/gi, '').replace(/```/g, '').trim();
+      const firstBrace = cleaned.indexOf('{');
+      const lastBrace = cleaned.lastIndexOf('}');
+      if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+        cleaned = cleaned.substring(firstBrace, lastBrace + 1);
+      }
       return JSON.parse(cleaned) as T;
     } catch {
       return null;
@@ -75,7 +106,10 @@ export class AIService {
       })
     });
 
-    if (!res.ok) throw new Error(`Groq API error: ${res.statusText}`);
+    if (!res.ok) {
+      const errText = await res.text().catch(() => res.statusText);
+      throw new Error(`Groq API error (${res.status}): ${errText}`);
+    }
     const data = (await res.json()) as any;
     return data.choices?.[0]?.message?.content ?? '';
   }
@@ -100,7 +134,10 @@ export class AIService {
       })
     });
 
-    if (!res.ok) throw new Error(`Gemini API error: ${res.statusText}`);
+    if (!res.ok) {
+      const errText = await res.text().catch(() => res.statusText);
+      throw new Error(`Gemini API error (${res.status}): ${errText}`);
+    }
     const data = (await res.json()) as any;
     return data.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
   }
@@ -123,7 +160,10 @@ export class AIService {
       })
     });
 
-    if (!res.ok) throw new Error(`OpenAI API error: ${res.statusText}`);
+    if (!res.ok) {
+      const errText = await res.text().catch(() => res.statusText);
+      throw new Error(`OpenAI API error (${res.status}): ${errText}`);
+    }
     const data = (await res.json()) as any;
     return data.choices?.[0]?.message?.content ?? '';
   }

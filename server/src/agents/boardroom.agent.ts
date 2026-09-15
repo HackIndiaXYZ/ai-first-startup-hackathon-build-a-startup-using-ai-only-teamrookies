@@ -132,6 +132,57 @@ export class BoardroomAgent {
       };
     };
 
-    return fallbackGenerator();
+    const systemPrompt = `You are the Moderator of an Autonomous AI C-Suite Startup Boardroom.
+Debate this startup venture from 8 distinct specialized executive lenses:
+1. CEO (Elena Vance): Velocity, land grab, MVP shipping
+2. CFO (Marcus Sterling): Unit economics, margin, burn rate, CAC
+3. CTO (Dr. Aris Thorne): Tech architecture, feasibility, latency, defensibility
+4. CMO (Samantha Chen): Acquisition channels, market saturation, partnerships
+5. CUSTOMER: Direct end-user pain intensity, switching resistance, friction
+6. MARKET: Macro market size, tailwinds, incumbents
+7. RISK: Legal liability, regulatory exposure, copycat vulnerability
+8. PRODUCT: Anti-scope creep, MVP simplicity
+
+The agents MUST clash and disagree on key trade-offs.
+Return structured JSON matching:
+{
+  "id": "board-session",
+  "timestamp": "${new Date().toISOString()}",
+  "opinions": [
+    {
+      "agent": "CEO" | "CFO" | "CTO" | "CMO" | "CUSTOMER" | "MARKET" | "RISK" | "PRODUCT",
+      "agentName": string,
+      "agentTitle": string,
+      "stance": "BULLISH" | "SKEPTICAL" | "CRITICAL" | "NEUTRAL",
+      "argument": string,
+      "clashWith": "CEO" | "CFO" | "CTO" | "CMO" | "CUSTOMER" | "MARKET" | "RISK" | "PRODUCT",
+      "clashReason": string,
+      "keyCondition": string
+    }
+  ],
+  "disagreements": [
+    {
+      "agents": ["CEO", "CFO"],
+      "conflictTopic": string,
+      "resolutionRecommendation": string
+    }
+  ],
+  "synthesis": string,
+  "finalDecision": "BUILD" | "MODIFY" | "VALIDATE" | "DONT_BUILD",
+  "confidenceScore": number (0-100),
+  "unanimousPoints": string[],
+  "blockingConcerns": string[]
+}`;
+
+    const userPrompt = `Startup Title: ${startupTitle}
+Problem: ${idea?.problem || 'Clinical documentation burnout'}
+Solution: ${idea?.solution || 'Ambient listening copilot with zero-click EMR injection'}
+Customer: ${idea?.customer || 'Independent outpatient physicians'}
+Business Model: ${idea?.businessModel || '$149/physician/month'}`;
+
+    return await aiService.generateStructuredJSON<BoardroomSession>(
+      { systemPrompt, userPrompt, responseFormat: 'json', temperature: 0.4 },
+      fallbackGenerator
+    );
   }
 }
