@@ -2,6 +2,7 @@
 
 > **"Your AI co-founder for discovering, validating, and launching the right startup."**  
 > *"Your next startup could be hiding in your skills — or on your street."*
+> **DEMO VIDEO LINK:**-https://drive.google.com/file/d/1SKhdrb8WmPNzXtYWLG2NydIwv0OkqeBe/view?usp=sharing
 
 ![Figure 1: AI COMPANY Landing Interface & Platform Core](screenshots/1_index.jpg)
 
