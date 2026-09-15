@@ -171,7 +171,7 @@ export const IdeaLabPage: React.FC = () => {
           }`}
         >
           <Skull className="w-4 h-4 text-rose-400" />
-          <span>💀 KILL MY STARTUP ({killReport?.survivalScore || 68}/100)</span>
+          <span> KILL MY STARTUP ({killReport?.survivalScore || 68}/100)</span>
         </button>
 
         <button
@@ -183,7 +183,7 @@ export const IdeaLabPage: React.FC = () => {
           }`}
         >
           <Sparkles className="w-4 h-4 text-emerald-400" />
-          <span>✨ MAKE IT UNIQUE (10 Vectors)</span>
+          <span> MAKE IT UNIQUE (10 Vectors)</span>
         </button>
 
         <button

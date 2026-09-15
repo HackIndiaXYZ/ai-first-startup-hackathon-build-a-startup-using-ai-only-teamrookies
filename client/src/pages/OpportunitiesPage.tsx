@@ -154,7 +154,7 @@ export const OpportunitiesPage: React.FC = () => {
           }`}
         >
           <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-          <span>✨ Surprise Me (Unconventional)</span>
+          <span> Surprise Me (Unconventional)</span>
         </button>
       </div>
 

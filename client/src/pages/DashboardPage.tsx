@@ -136,7 +136,7 @@ export const DashboardPage: React.FC = () => {
               className="px-3.5 py-2 rounded-lg bg-rose-950/50 hover:bg-rose-950/80 border border-rose-800/60 text-rose-300 font-mono text-xs font-medium flex items-center gap-1.5 transition-colors"
             >
               <Skull className="w-3.5 h-3.5 text-rose-400" />
-              <span>💀 Kill My Startup</span>
+              <span> Kill My Startup</span>
             </Link>
 
             <Link

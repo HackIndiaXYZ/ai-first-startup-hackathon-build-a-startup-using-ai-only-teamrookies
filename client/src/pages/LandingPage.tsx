@@ -277,7 +277,7 @@ export const LandingPage: React.FC = () => {
             <div className="p-5 rounded-xl bg-dark-950 border border-slate-800">
               <div className="flex items-center gap-2 text-rose-400 font-mono font-bold text-sm mb-2">
                 <Skull className="w-4 h-4" />
-                <span>💀 Kill My Startup</span>
+                <span> Kill My Startup</span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
                 Brutal devil's advocate stress-testing. Transparent survival score and honest "Don't Build This" recommendations.
@@ -297,7 +297,7 @@ export const LandingPage: React.FC = () => {
             <div className="p-5 rounded-xl bg-dark-950 border border-slate-800">
               <div className="flex items-center gap-2 text-emerald-400 font-mono font-bold text-sm mb-2">
                 <Sparkles className="w-4 h-4" />
-                <span>✨ Surprise Me Opportunity</span>
+                <span> Surprise Me Opportunity</span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
                 Recommends unconventional, high-signal local opportunities outside your usual comfort zone where you have unfair tech leverage.
